@@ -20,15 +20,15 @@
 // Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 //
 
-#include "veins_inet/VeinsInetManager.h"
+#include "veins_inet/VeinsInetManagerForker.h"
 
 namespace veins {
 
-Define_Module(VeinsInetManager);
+Define_Module(VeinsInetManagerForker);
 
-void VeinsInetManager::initialize(int stage)
+void VeinsInetManagerForker::initialize(int stage)
 {
-    TraCIScenarioManagerLaunchd::initialize(stage);
+    TraCIScenarioManagerForker::initialize(stage);
     VeinsInetManagerBase::initialize(stage);
 }
 

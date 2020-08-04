@@ -20,16 +20,21 @@
 // Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 //
 
-#include "veins_inet/VeinsInetManager.h"
+package org.car2x.veins.subprojects.veins_inet;
 
-namespace veins {
+import org.car2x.veins.modules.mobility.traci.TraCIScenarioManager;
 
-Define_Module(VeinsInetManager);
 
-void VeinsInetManager::initialize(int stage)
+//
+// Creates and manages network nodes corresponding to cars.
+//
+// See the Veins website <a href="http://veins.car2x.org/"> for a tutorial, documentation, and publications </a>.
+//
+// @author Christoph Sommer
+//
+simple VeinsInetManagerBase extends TraCIScenarioManager
 {
-    TraCIScenarioManagerLaunchd::initialize(stage);
-    VeinsInetManagerBase::initialize(stage);
+    parameters:
+        @class(veins::VeinsInetManagerBase);
 }
 
-}
